@@ -24,12 +24,12 @@ parser.add_argument('--mode', '-m', type=str, help='this is distinguish with use
                     choices=['friend', 'group'])
 parser.add_argument('--username', '-u', type=str, help='type a user name who you want to talk to ')
 parser.add_argument('--content', '-c', type=str, help='type a content which you want to say instead of hello ')
-parser.add_argument('--auto', '-a', type=bool, help='if you want tag this program with [AI auto reply] please type <True> ',choices=['True', 'False'])
+parser.add_argument('--auto', '-a', type=bool, help='if you want tag this program with [AI auto reply] please type <True> ',choices=[True, False])
 
 args = parser.parse_args()
 
 print(args)
-if args.mode is None or args.usernaem is None or args.content is None or args.ai is None:
+if args.mode is None or args.username is None or args.content is None or args.auto is None:
     print("please type --help for help")
     sys.exit(1)
 
